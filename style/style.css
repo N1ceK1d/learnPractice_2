@@ -1,0 +1,127 @@
+body {
+    background: linear-gradient(120deg, rgb(14, 56, 110), rgb(41, 140, 221));
+    width: 98vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: white;
+    width: 86vw;
+    margin: 1vw auto;
+    height: 6vh;
+    padding-top: .5vh;
+    text-align: right;
+    border-radius: 10px;
+}
+
+header h2 {
+    text-align: right;
+    margin: 1vh 2vw;
+}
+
+.menu {
+    background-color: white;
+    width: 10vw;
+    height: 90vh;
+    margin: 1vw 1vw;
+    border-radius: 10px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-list a {
+    font-size: 20px;
+    margin: 10px 10px;
+    text-decoration: none;
+    color: white;
+    padding: 2px 0;
+    background-color: rgb(41, 140, 221);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.menu-list a:hover {
+    cursor: pointer;
+    transition: .3s;
+    background-color: rgb(14, 56, 110);
+}
+
+.info {
+    background-color: white;
+    width: 86vw;
+    height: 81.5vh;
+    border-radius: 10px;
+}
+
+.menu-list a .sel {
+    background-color: rgb(14, 56, 110);
+}
+
+.employers {
+    height: 70vh;
+    overflow-y: scroll;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.employers td {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.employers .table_head {
+    background-color: rgb(14, 56, 110);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.employers .table_item {
+    background-color: rgb(41, 140, 221);
+    color: white;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+.employers .table_item:hover {
+    background-color: rgb(14, 56, 110);
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.navigation {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.nav_button {
+    background-color: rgb(41, 140, 221);
+    transition: .3s;
+    color: white;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.nav_button:hover {
+    transition: .3s;
+    cursor: pointer;
+    background-color: rgb(14, 56, 110);
+}

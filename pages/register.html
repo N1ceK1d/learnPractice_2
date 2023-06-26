@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистарция</title>
+    <link rel="stylesheet" href="../style/form.css">
+</head>
+<body>
+    <form action="login.php" method="post">
+        <input type="text" name="l_fullname" placeholder="Ф.И.О">
+        <select name="department">
+            <option value="" selected>Выберите отдел</option>
+            <option value="Исследовательский">Исследовательский</option>
+            <option value="Научный">Научный</option>
+            <option value="Технический">Технический</option>
+            <option value="Производственный">Производственный</option>
+        </select>
+        <input type="text" name="l_login" placeholder="Логин">
+        <input type="password" name="l_password" placeholder="Пароль">
+        <input type="submit" value="Регистарция">
+        <p>У вас уже есть аккаунт? <a href="login.html">Войдите</a></p>
+    </form>
+</body>
+</html>
