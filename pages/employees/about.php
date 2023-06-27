@@ -12,9 +12,8 @@
 <body>
 <div class="menu">
             <div class='menu-list'>
-                <a href="index.php">Работники</a>
-                <a href="orders.php">Заявки</a>
-                <a class='selected' href="about.php">Обо мне</a>
+                <a class='selected' href="index.php">Заявки</a>
+                <a href="about.php">Обо мне</a>
                 <form action="exit.php">
                     <input type="submit" value="Выйти" name='exit' class="exit_button" id="exBtn">
                 </form>
@@ -23,13 +22,26 @@
     <div class="container">
         
         <header>
-            <h2>Добро пожаловать <?php echo "Пётр Иванович Кандратьев"?></h2>
+            <h2>Добро пожаловать <?php echo $_SESSION['fullname']?></h2>
         </header>
         <div class="info">
-            
+            <?php
+                $conn = new mysqli("localhost", "root", "", "falaleev_lp");
+                $sql = "SELECT Bosses.fullname as boss FROM Bosses
+                INNER JOIN Departments ON Bosses.department_id = Departments.id
+                WHERE Departments.name = '".$_SESSION['name']."';";
+                $boss = "";
+                if($result = $conn->query($sql)){
+                    
+                    foreach($result as $row){
+                        $boss = $row['boss'];
+                    }
+                }
+            ?>
             <h2><?php echo $_SESSION['fullname']?></h2>
             <p><?php echo "Отдел: ".$_SESSION['name']?></p>
             <p><?php echo "Опыт работы: ".$_SESSION['exp']?></p>
+            <p><?php echo "Начальник: ".$boss?></p>
         </div>
     </div>
     

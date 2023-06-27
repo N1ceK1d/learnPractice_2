@@ -11,8 +11,7 @@
 <body>
 <div class="menu">
             <div class='menu-list'>
-                <a href="index.php">Работники</a>
-                <a class='selected' href="orders.php">Заявки</a>
+                <a class='selected' href="index.php">Заявки</a>
                 <a href="about.php">Обо мне</a>
                 <form action="exit.php">
                     <input type="submit" value="Выйти" name='exit' class="exit_button" id="exBtn">
@@ -26,7 +25,6 @@
         </header>
         <div class="info">
         <?php
-                    $offset = intval(file_get_contents("offset.txt"));
                     $conn = new mysqli("localhost", "root", "", "falaleev_lp");
                     $sql = "SELECT Orders.order_date as ord_date, Orders.scope_of_work as dep_name, SpareParts.name as spare_name
                     FROM Orders
